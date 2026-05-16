@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="scoreboard">
+            <div class="score-section">
+                <h2>Player</h2>
+                <div class="score" id="playerScore">0</div>
+            </div>
+            <div class="vs">VS</div>
+            <div class="score-section">
+                <h2>Computer</h2>
+                <div class="score" id="computerScore">0</div>
+            </div>
+        </div>
+
+        <div class="game-info">
+            <p>Use <strong>Mouse</strong> or <strong>Arrow Keys ↑↓</strong> to move left paddle</p>
+            <p id="mobileInfo" class="mobile-info">Use <strong>Joystick</strong> for mobile</p>
+        </div>
+
+        <canvas id="gameCanvas" width="800" height="400"></canvas>
+
+        <!-- Mobile Joystick -->
+        <div id="joystickContainer" class="joystick-container">
+            <div id="joystickBase" class="joystick-base">
+                <div id="joystickHandle" class="joystick-handle"></div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="startBtn" class="btn btn-primary">Start Game</button>
+            <button id="resetBtn" class="btn btn-secondary">Reset Score</button>
+        </div>
+
+        <div class="instructions">
+            <h3>How to Play:</h3>
+            <ul>
+                <li>Move your paddle to hit the ball back</li>
+                <li>Score a point when the opponent misses</li>
+                <li>First to reach 11 points wins</li>
+                <li>Use mouse Y position or arrow keys to control left paddle</li>
+                <li>Computer controls the right paddle with AI</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
